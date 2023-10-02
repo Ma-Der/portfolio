@@ -1,3 +1,3 @@
 export const AboutMe = () => {
-  return <div></div>;
+  return <div>About Me</div>;
 };

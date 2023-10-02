@@ -5,12 +5,18 @@ import styles from "./rwd.module.scss";
 
 const { navigation } = staticData;
 
+const { wrapper, wrapperLink } = styles;
+
 export const Navigation = () => {
   return (
-    <div>
+    <div className={wrapper}>
       {navigation.map((item) => {
         return (
-          <Link to={item.link} key={`${item.name}+${item.name}`}>
+          <Link
+            className={wrapperLink}
+            to={item.link}
+            key={`${item.name}+${item.name}`}
+          >
             {item.name}
           </Link>
         );
