@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
-import { Navigation } from "./components/Navigation";
 import { AboutMe } from "./components/AboutMe";
 import { Homepage } from "./components/Homepage";
 import { Header } from "./components/Header";
@@ -13,7 +12,6 @@ function App() {
   return (
     <Fragment>
       <Header />
-      <Navigation />
       <Routes>
         <Route path={"/"} element={<Homepage />} />
         <Route path={"/about"} element={<AboutMe />} />

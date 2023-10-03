@@ -1,0 +1,25 @@
+@import "../../styles/fonts";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 25px 0;
+  background: linear-gradient(to bottom right,#ef604e, #f5915d);
+
+  &Icon {
+    font-family: "Adine";
+    font-size: 45px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 7px;
+    text-align: center;
+    width: 20%;
+    z-index: 10;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}

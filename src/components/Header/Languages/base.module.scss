@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  margin-left: auto;
+  gap: 10px;
+  padding: 0 10px;
+  margin-right: 50px;
+  z-index: 10;
+  &Icon {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+  }
+}
