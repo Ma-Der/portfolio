@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
 import { AboutMe } from "./components/AboutMe";
@@ -9,16 +9,17 @@ import { Footer } from "./components/Footer";
 import { Projects } from "./components/Projects";
 
 function App() {
+  const [activeLink, setActiveLink] = useState("Home");
   return (
     <Fragment>
-      <Header />
+      <Header activeLink={activeLink} setActiveLink={setActiveLink}/>
       <Routes>
         <Route path={"/"} element={<Homepage />} />
         <Route path={"/about"} element={<AboutMe />} />
         <Route path={"/hobby"} element={<Hobby />} />
         <Route path={"/projects"} element={<Projects />} />
       </Routes>
-      <Footer />
+      <Footer activeLink={activeLink} setActiveLink={setActiveLink}/>
     </Fragment>
   );
 }

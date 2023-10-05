@@ -1,0 +1,85 @@
+.wrapper {
+  background-color: #f8b899;
+  max-height: 250px;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  &Container {
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  &Copyright {
+    text-align: center;
+  }
+
+  &LeftSide {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &RightSide {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &MenuLink {
+      text-decoration: none;
+      color: #fff;
+      width: fit-content;
+      padding: 3px;
+    }
+  }
+
+  &Icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    &Icon {
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  &Initials {
+    display: flex;
+    width: fit-content;
+    padding: 10px 0;
+    text-decoration: none;
+    &Letters {
+      background-color: #f9631d;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      color: #fff;
+      font-size: 25px;
+      font-weight: 700;
+      border-radius: 10px;
+      border: 2px outset #f8b899;
+    }
+
+    &Name {
+      transform: rotate(2deg);
+    }
+
+    &Surname {
+      transform: rotate(-8deg) translateY(6px) translateX(-5px);
+    }
+  }
+}
+
+.active {
+  box-shadow: inset 0 -0.05em #000;
+  display: inline;
+}
