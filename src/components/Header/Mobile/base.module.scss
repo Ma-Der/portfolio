@@ -1,0 +1,130 @@
+@import "../../../styles/fonts";
+
+.wrapper {
+  display: block;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  position: relative;
+  z-index: 100;
+  animation: openMobile 0.3s ease-in-out;
+
+  &Container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    max-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    background: linear-gradient(to bottom right, #ef604e, #f5915d);
+    padding: 25px 10px;
+  }
+
+  &Close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+  
+      background: #fff;
+      border-radius: 3px;
+  
+      z-index: 1;
+
+      &:first-of-type {
+        transform: rotate(45deg) translate(6px, 6px);
+      }
+
+      &:last-of-type {
+        transform: rotateZ(135deg);
+      }
+      
+    }
+  }
+
+  &Icon {
+    font-family: "Adine";
+    font-size: 30px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 5px;
+    padding-left: 10px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+.hide {
+  display: none;
+  animation: hideMobile 0.3s ease-in-out;
+}
+
+.hamburger {
+  background: linear-gradient(to bottom right, #ef604e, #f5915d);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  border-radius: 50px;
+  transform: translateX(0px);
+  transition: transform 0.2s ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #fff;
+    border-radius: 3px;
+
+    z-index: 1;
+  }
+}
+
+.moveLeft {
+  transform: translateX(-768px);
+}
+
+@keyframes hideMobile {
+  0% {
+    display: block;
+    transform: translateX(0px);
+  }
+  100% {
+    display: none;
+    transform: translateX(-769px);
+  }
+}
+
+@keyframes openMobile {
+  0% {
+    display: none;
+    transform: translateX(-769px);
+  }
+  100% {
+    display: block;
+    transform: translateX(0px);
+  }
+}

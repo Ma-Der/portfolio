@@ -1,0 +1,51 @@
+@use 'sass:map';
+@import '../../styles/variables';
+@import './base.module.scss';
+
+@media only screen and (min-width: map.get($breakpoints, 'desktop')) {
+    .wrapper {
+     
+        &Container {
+
+        }
+      
+        &Copyright {
+
+        }
+      
+        &LeftSide {
+
+        }
+      
+        &RightSide {
+
+      
+          &MenuLink {
+
+          }
+        }
+      
+        &Icons {
+          &Icon {
+            svg {
+
+            }
+          }
+        }
+      
+        &Initials {
+
+          &Letters {
+            width: 60px;
+            height: 60px;
+            font-size: 35px;
+          }
+      
+          &Name {
+          }
+      
+          &Surname {
+          }
+        }
+      }
+}

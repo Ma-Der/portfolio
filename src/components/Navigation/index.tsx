@@ -9,14 +9,17 @@ const { navigation } = staticData;
 
 const { wrapper, wrapperLink, active } = styles;
 
-export const Navigation = ({ activeLink, setActiveLink }: HeaderProps) => {
+export const Navigation = ({ activeLink, setActiveLink, setOpenMenu }: HeaderProps) => {
   return (
     <div className={wrapper}>
       {navigation.map((item) => {
         return (
           <Link
             className={cx(wrapperLink, activeLink === item.name ? active : "")}
-            onClick={() => setActiveLink(item.name)}
+            onClick={() => {
+              setActiveLink(item.name);
+              setOpenMenu && setOpenMenu(false);
+            }}
             to={item.link}
             key={`${item.name}+${item.name}`}
           >

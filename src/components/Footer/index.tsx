@@ -1,6 +1,6 @@
 import { GithubSVG, LinkedinSVG } from "../shared/Icons";
 import staticData from "../../utils/static-content.json";
-import styles from "./base.module.scss";
+import styles from "./rwd.module.scss";
 import { Link } from "react-router-dom";
 import { FooterProps } from "../../contracts/components/Footer";
 import { cx } from "../../utils/cx";
@@ -28,6 +28,14 @@ export const Footer = ({ activeLink, setActiveLink }: FooterProps) => {
     <div className={wrapper}>
       <div className={wrapperContainer}>
         <div className={wrapperLeftSide}>
+          <div className={wrapperIcons}>
+            <span className={wrapperIconsIcon}>
+              <LinkedinSVG />
+            </span>
+            <span className={wrapperIconsIcon}>
+              <GithubSVG />
+            </span>
+          </div>
           <Link
             to="/"
             className={wrapperInitials}
@@ -40,14 +48,6 @@ export const Footer = ({ activeLink, setActiveLink }: FooterProps) => {
               D
             </div>
           </Link>
-          <div className={wrapperIcons}>
-            <span className={wrapperIconsIcon}>
-              <LinkedinSVG />
-            </span>
-            <span className={wrapperIconsIcon}>
-              <GithubSVG />
-            </span>
-          </div>
         </div>
         <div className={wrapperRightSide}>
           {navigation.map((item) => {

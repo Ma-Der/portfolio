@@ -1,21 +1,30 @@
 @import "../../styles/fonts";
 
 .wrapper {
-  display: flex;
+  display: none;
   align-items: center;
   position: relative;
   padding: 25px 0;
   background: linear-gradient(to bottom right,#ef604e, #f5915d);
 
+  &Container {
+    display: flex;
+    max-width: 1512px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+  }
+
   &Icon {
     font-family: "Adine";
-    font-size: 45px;
+    font-size: 30px;
     color: #fff;
     font-weight: 500;
-    letter-spacing: 7px;
+    letter-spacing: 5px;
     text-align: center;
     width: 20%;
     z-index: 10;
+    padding-left: 10px;
 
     a {
       text-decoration: none;

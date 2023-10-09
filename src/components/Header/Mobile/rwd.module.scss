@@ -1,0 +1,12 @@
+@use "sass:map";
+@import "./base.module.scss";
+@import "../../../styles/variables";
+
+@media only screen and (min-width: map.get($breakpoints, "tablet")) {
+  .wrapper {
+    display: none;
+  }
+  .hamburger { 
+    display: none;
+  }
+}

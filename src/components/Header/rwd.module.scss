@@ -1,0 +1,32 @@
+@use "sass:map";
+@import "./base.module.scss";
+@import "../../styles/variables";
+
+@media only screen and (min-width: map.get($breakpoints, "tablet")) {
+  .wrapper {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: map.get($breakpoints, "desktop")) {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 25px 0;
+    background: linear-gradient(to bottom right, #ef604e, #f5915d);
+
+    &Container {
+      display: flex;
+      margin: 0 auto;
+      position: relative;
+      width: 100%;
+    }
+
+    &Icon {
+      font-size: 45px;
+      font-weight: 500;
+      letter-spacing: 7px;
+    }
+  }
+}

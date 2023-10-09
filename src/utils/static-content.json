@@ -5,16 +5,16 @@
       "name": "Home"
     },
     {
-      "link": "/hobby",
-      "name": "Hobby"
-    },
-    {
       "link": "/projects",
       "name": "Projects"
     },
     {
-      "link": "/about",
-      "name": "About Me"
+      "link": "/hobby",
+      "name": "Hobby"
+    },
+    {
+      "link": "/contact",
+      "name": "Contact"
     }
   ]
 }
