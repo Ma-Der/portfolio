@@ -2,6 +2,59 @@
 @import "./base.module.scss";
 @import "../../../styles/variables";
 
+@media only screen and (min-width: map.get($breakpoints, "largeMobile")) {
+  .wrapper {
+    &Container {
+      width: 50%;
+      padding: 25px 10px;
+    }
+  
+    &Close {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+  
+      cursor: pointer;
+  
+      span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+    
+        background: #fff;
+        border-radius: 3px;
+    
+        z-index: 1;
+  
+        &:first-of-type {
+          transform: rotate(45deg) translate(6px, 6px);
+        }
+  
+        &:last-of-type {
+          transform: rotateZ(135deg);
+        }
+        
+      }
+    }
+  
+    &Icon {
+      font-family: "Adine";
+      font-size: 35px;
+      color: #fff;
+      font-weight: 500;
+      letter-spacing: 5px;
+      padding-left: 10px;
+  
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: map.get($breakpoints, "tablet")) {
   .wrapper {
     display: none;

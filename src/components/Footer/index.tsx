@@ -4,6 +4,8 @@ import styles from "./rwd.module.scss";
 import { Link } from "react-router-dom";
 import { FooterProps } from "../../contracts/components/Footer";
 import { cx } from "../../utils/cx";
+import { useFooterDimensions } from "./hooks";
+import { useRef } from "react";
 
 const { navigation } = staticData;
 
@@ -23,9 +25,11 @@ const {
   active,
 } = styles;
 
-export const Footer = ({ activeLink, setActiveLink }: FooterProps) => {
+export const Footer = ({ activeLink, setActiveLink, footerRef }: FooterProps) => {
+
+  
   return (
-    <div className={wrapper}>
+    <div ref={footerRef} className={wrapper}>
       <div className={wrapperContainer}>
         <div className={wrapperLeftSide}>
           <div className={wrapperIcons}>

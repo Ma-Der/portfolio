@@ -1,6 +1,6 @@
 import { LanguagesProps } from "../../../contracts/components/Header/utilityTypes";
 import { PolishFlagSVG, USFlagSVG } from "../../shared/Icons";
-import styles from "./base.module.scss";
+import styles from "./rwd.module.scss";
 
 const { wrapper, wrapperIcon } = styles;
 
