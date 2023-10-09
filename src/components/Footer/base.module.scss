@@ -1,6 +1,5 @@
 .wrapper {
   background-color: #f8b899;
-  max-height: 250px;
   padding: 20px;
   position: fixed;
   bottom: 0;
@@ -9,6 +8,8 @@
 
   &Container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
@@ -18,18 +19,19 @@
     text-align: center;
   }
 
-  &LeftSide {
-    width: 50%;
+  &RightSide {
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-self: center;
     justify-content: space-between;
   }
 
-  &RightSide {
-    width: 50%;
+  &LeftSide {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
 
     &MenuLink {
@@ -37,6 +39,7 @@
       color: #fff;
       width: fit-content;
       padding: 3px;
+      font-size: 20px;
     }
   }
 
@@ -45,6 +48,7 @@
     gap: 10px;
     justify-content: center;
     align-items: center;
+    margin: 10px 0;
     &Icon {
       svg {
         width: 30px;
@@ -55,10 +59,10 @@
 
   &Initials {
     display: flex;
-    width: fit-content;
-    padding: 10px 0;
+    padding: 25px 0;
     text-decoration: none;
-    transform: translateX(50%);
+    justify-content: center;
+    
     &Letters {
       background-color: #f9631d;
       width: 40px;

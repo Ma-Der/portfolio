@@ -4,8 +4,6 @@ import styles from "./rwd.module.scss";
 import { Link } from "react-router-dom";
 import { FooterProps } from "../../contracts/components/Footer";
 import { cx } from "../../utils/cx";
-import { useFooterDimensions } from "./hooks";
-import { useRef } from "react";
 
 const { navigation } = staticData;
 
@@ -20,26 +18,37 @@ const {
   wrapperInitialsSurname,
   wrapperRightSide,
   wrapperLeftSide,
-  wrapperRightSideMenuLink,
+  wrapperLeftSideMenuLink,
   wrapperCopyright,
   active,
 } = styles;
 
-export const Footer = ({ activeLink, setActiveLink, footerRef }: FooterProps) => {
-
-  
+export const Footer = ({
+  activeLink,
+  setActiveLink,
+  footerRef,
+}: FooterProps) => {
   return (
     <div ref={footerRef} className={wrapper}>
       <div className={wrapperContainer}>
         <div className={wrapperLeftSide}>
-          <div className={wrapperIcons}>
-            <span className={wrapperIconsIcon}>
-              <LinkedinSVG />
-            </span>
-            <span className={wrapperIconsIcon}>
-              <GithubSVG />
-            </span>
-          </div>
+          {navigation.map((item) => {
+            return (
+              <Link
+                className={cx(
+                  wrapperLeftSideMenuLink,
+                  activeLink === item.name ? active : ""
+                )}
+                onClick={() => setActiveLink(item.name)}
+                to={item.link}
+                key={`${item.link}_${item.name}`}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
+        </div>
+        <div className={wrapperRightSide}>
           <Link
             to="/"
             className={wrapperInitials}
@@ -52,23 +61,14 @@ export const Footer = ({ activeLink, setActiveLink, footerRef }: FooterProps) =>
               D
             </div>
           </Link>
-        </div>
-        <div className={wrapperRightSide}>
-          {navigation.map((item) => {
-            return (
-              <Link
-                className={cx(
-                  wrapperRightSideMenuLink,
-                  activeLink === item.name ? active : ""
-                )}
-                onClick={() => setActiveLink(item.name)}
-                to={item.link}
-                key={`${item.link}_${item.name}`}
-              >
-                {item.name}
-              </Link>
-            );
-          })}
+          <div className={wrapperIcons}>
+            <span className={wrapperIconsIcon}>
+              <LinkedinSVG />
+            </span>
+            <span className={wrapperIconsIcon}>
+              <GithubSVG />
+            </span>
+          </div>
         </div>
       </div>
 

@@ -2,50 +2,36 @@
 @import '../../styles/variables';
 @import './base.module.scss';
 
-@media only screen and (min-width: map.get($breakpoints, 'desktop')) {
-    .wrapper {
-     
-        &Container {
+@media only screen and (min-width: map.get($breakpoints, 'largeMobile')) {
+  .wrapper {
+ 
+    &Container {
+      flex-direction: row;
+    }
 
-        }
-      
-        &Copyright {
+    &RightSide {
+      flex-direction: row;
+      width: 50%;
+    }
 
-        }
-      
-        &LeftSide {
+    
+  &LeftSide {
+    width: 50%;
+    align-items: flex-start;
+  }
+  
+    &Initials {
+      transform: translateX(-50%);
+      padding: 10px 0;
+      &Letters {
+        width: 60px;
+        height: 60px;
+        font-size: 35px;
+      }  
+    }
 
-        }
-      
-        &RightSide {
-
-      
-          &MenuLink {
-
-          }
-        }
-      
-        &Icons {
-          &Icon {
-            svg {
-
-            }
-          }
-        }
-      
-        &Initials {
-
-          &Letters {
-            width: 60px;
-            height: 60px;
-            font-size: 35px;
-          }
-      
-          &Name {
-          }
-      
-          &Surname {
-          }
-        }
-      }
+    &Icons {
+      margin: 0;
+    }
+  }
 }
