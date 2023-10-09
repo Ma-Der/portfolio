@@ -62,12 +62,22 @@ export const Footer = ({
             </div>
           </Link>
           <div className={wrapperIcons}>
-            <span className={wrapperIconsIcon}>
+            <a
+              href={"https://www.linkedin.com/in/ma-der/"}
+              target="_blank"
+              rel="noreferrer"
+              className={wrapperIconsIcon}
+            >
               <LinkedinSVG />
-            </span>
-            <span className={wrapperIconsIcon}>
+            </a>
+            <a
+              href={"https://github.com/Ma-Der"}
+              target="_blank"
+              rel="noreferrer"
+              className={wrapperIconsIcon}
+            >
               <GithubSVG />
-            </span>
+            </a>
           </div>
         </div>
       </div>
