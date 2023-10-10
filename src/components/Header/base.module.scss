@@ -3,9 +3,12 @@
 .wrapper {
   display: none;
   align-items: center;
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
   padding: 25px 0;
   background: linear-gradient(to bottom right,#ef604e, #f5915d);
+  z-index: 10;
 
   &Container {
     display: flex;
