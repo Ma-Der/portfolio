@@ -1,0 +1,21 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: space-between;
+  padding: 25px;
+  font-family: 'Lato';
+
+  &Project {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+
+    &Title {
+        text-transform: uppercase;
+        font-size: 25px;
+        color: #899EA9;
+        text-align: center;
+    }
+  }
+}

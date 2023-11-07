@@ -30,8 +30,8 @@
           "description": "",
           "link": "https://www.blendjet.com",
           "image": {
-            "src": "",
-            "alt": ""
+            "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699350059/portfolio/blendjet_uu2jql.png",
+            "alt": "blendjet"
           }
         },
         {
@@ -39,8 +39,8 @@
           "description": "",
           "link": "https://www.rbxactive.com",
           "image": {
-            "src": "",
-            "alt": ""
+            "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699349996/portfolio/rbx_owvsmj.png",
+            "alt": "rbx-active"
           }
         },
         {
@@ -48,8 +48,26 @@
           "description": "",
           "link": "https://www.muslincomfort.com",
           "image": {
-            "src": "",
-            "alt": ""
+            "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699350256/portfolio/muslin_m6xccj.png",
+            "alt": "muslin-comfort"
+          }
+        },
+        {
+          "title": "Alex And Ani",
+          "description": "",
+          "link": "https://www.alexandani.com",
+          "image": {
+            "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699361601/portfolio/ti7bwxpflwwroknqeb06.png",
+            "alt": "alexandani"
+          }
+        },
+        {
+          "title": "Three Bird Nest",
+          "description": "",
+          "link": "https://www.alexandani.com",
+          "image": {
+            "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699361753/portfolio/3bn_awyptw.png",
+            "alt": "threebirdnest"
           }
         }
       ]
@@ -63,6 +81,15 @@
         },
         {
           "title": "Erli Google Ads API",
+          "description": "I was creating an api of google ads and google merchant center for Erli, so they could internaly provide google ads for their clients. Technologies used: NodeJS"
+        },
+        {
+          "title": "Leaderna Platform",
+          "link": "https://www.leadernaplatform.com/",
+          "image": {
+            "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699366844/portfolio/leaderna_hv2i2q.png",
+            "alt": "leaderna"
+          },
           "description": ""
         }
       ]
