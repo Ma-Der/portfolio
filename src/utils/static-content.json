@@ -16,5 +16,67 @@
       "link": "/contact",
       "name": "Contact"
     }
-  ]
+  ],
+  "home": {
+    "title": "Let me introduce myself ...",
+    "description": ""
+  },
+  "projects": {
+    "frontend": {
+      "title": "Frontend",
+      "projects": [
+        {
+          "title": "Blendjet",
+          "description": "",
+          "link": "https://www.blendjet.com",
+          "image": {
+            "src": "",
+            "alt": ""
+          }
+        },
+        {
+          "title": "RBX Active",
+          "description": "",
+          "link": "https://www.rbxactive.com",
+          "image": {
+            "src": "",
+            "alt": ""
+          }
+        },
+        {
+          "title": "Muslin Comfort",
+          "description": "",
+          "link": "https://www.muslincomfort.com",
+          "image": {
+            "src": "",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    "backend": {
+      "title": "Backend",
+      "projects": [
+        {
+          "title": "Language school automatization",
+          "description": ""
+        },
+        {
+          "title": "Erli Google Ads API",
+          "description": ""
+        }
+      ]
+    }
+  },
+  "hobby": {
+    "title": "Hobby",
+    "description": ""
+  },
+  "contact": {
+    "title": "Contact",
+    "github": "https://www.github.com/Ma-Der",
+    "linkedin": "https://www.linkedin.com/in/ma-der/",
+    "phone": "512187396",
+    "email": "mactgder@gmail.com"
+  }
 }

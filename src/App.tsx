@@ -9,6 +9,7 @@ import { Footer } from "./components/Footer";
 import { Projects } from "./components/Projects";
 import { useFooterDimensions } from "./components/Footer/hooks";
 import { MobileHeader } from "./components/Header/Mobile";
+import data from './utils/static-content.json';
 
 function App() {
   const [activeLink, setActiveLink] = useState("Home");
@@ -21,15 +22,15 @@ function App() {
       <MobileHeader activeLink={activeLink} setActiveLink={setActiveLink} />
       <div className="wrapper">
         <Routes>
-          <Route path={"/"} element={<Homepage footerHeight={height} />} />
+          <Route path={"/"} element={<Homepage footerHeight={height} {...data.home} />} />
           <Route
             path={"/contact"}
-            element={<Contact footerHeight={height} />}
+            element={<Contact footerHeight={height} {...data.contact} />}
           />
-          <Route path={"/hobby"} element={<Hobby footerHeight={height} />} />
+          <Route path={"/hobby"} element={<Hobby footerHeight={height} {...data.hobby} />} />
           <Route
             path={"/projects"}
-            element={<Projects footerHeight={height} />}
+            element={<Projects footerHeight={height} {...data.projects} />}
           />
         </Routes>
       </div>

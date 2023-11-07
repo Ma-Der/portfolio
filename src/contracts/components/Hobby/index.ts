@@ -1,4 +1,5 @@
 export type HobbyProps = {
-    footerHeight: number;
-  };
-  
+  title: string;
+  description: string;
+  footerHeight: number;
+};
