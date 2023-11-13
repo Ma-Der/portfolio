@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
 .wrapper {
   background-color: #f8b899;
@@ -7,7 +7,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  font-family: 'Nasine';
+  font-family: "Nasine";
 
   &Container {
     display: flex;
@@ -43,6 +43,10 @@
       width: fit-content;
       padding: 3px;
       font-size: 20px;
+
+      &:hover {
+        color: #000;
+      }
     }
   }
 
@@ -56,6 +60,12 @@
       svg {
         width: 30px;
         height: 30px;
+
+        &:hover {
+          path {
+            fill: #dcdcdc !important;
+          }
+        }
       }
     }
   }
@@ -65,7 +75,7 @@
     padding: 25px 0;
     text-decoration: none;
     justify-content: center;
-    
+
     &Letters {
       background-color: #f9631d;
       width: 35px;

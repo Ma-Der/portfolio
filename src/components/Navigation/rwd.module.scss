@@ -4,11 +4,8 @@
 
 @media only screen and (min-width: map.get($breakpoints, "tablet")) {
   .wrapper {
-    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
+    gap: 35px;
     width: 100%;
     margin: 0;
 
@@ -29,12 +26,7 @@
 
 @media only screen and (min-width: map.get($breakpoints, "desktop")) {
     .wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-        width: 100%;
-        overflow: hidden;
+        gap: 45px;
       
         &Link {
           text-decoration: none;
