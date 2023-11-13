@@ -22,6 +22,7 @@
     "description": ""
   },
   "projects": {
+    "title": "Projects",
     "frontend": {
       "title": "Frontend",
       "projects": [
@@ -66,7 +67,7 @@
           "description": "",
           "link": "https://www.alexandani.com",
           "image": {
-            "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699361753/portfolio/3bn_awyptw.png",
+            "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699437986/3bn_awyptw_gdicwn.png",
             "alt": "threebirdnest"
           }
         }
@@ -100,7 +101,7 @@
     "description": ""
   },
   "contact": {
-    "title": "Contact",
+    "title": "You can catch me here ...",
     "github": "https://www.github.com/Ma-Der",
     "linkedin": "https://www.linkedin.com/in/ma-der/",
     "phone": "512187396",

@@ -4,10 +4,12 @@
 
 @media only screen and (min-width: map.get($breakpoints, "desktop")) {
   .wrapper {
-    grid-template-columns: repeat(2, 1fr);
-
-    &Project {
+    &Container {
+      grid-template-columns: repeat(2, 1fr);
+      &Project {
         width: 50%;
+      }
     }
+    
   }
 }

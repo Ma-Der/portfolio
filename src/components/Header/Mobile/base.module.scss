@@ -101,6 +101,10 @@
     border-radius: 3px;
 
     z-index: 1;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 

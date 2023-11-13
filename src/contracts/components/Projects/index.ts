@@ -1,14 +1,14 @@
 import { ProjectProps } from "./utilityTypes";
 
 export type ProjectsProps = {
-    footerHeight: number;
-    frontend: {
-      title: string;
-      projects: ProjectProps[];
-    };
-    backend: {
-      title: string;
-      projects: ProjectProps[];
-    }
+  title: string;
+  footerHeight: number;
+  frontend: {
+    title: string;
+    projects: ProjectProps[];
   };
-  
+  backend: {
+    title: string;
+    projects: ProjectProps[];
+  };
+};

@@ -1,0 +1,77 @@
+@import "../../styles/variables";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+
+  &Title {
+    font-size: 32px;
+    line-height: 26px;
+    text-align: center;
+    width: 100%;
+  }
+
+  &Icon {
+
+    a {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+      justify-content: space-between;
+      align-items: center;
+      width: 250px;
+      text-decoration: none;
+      color: #000;
+      margin-bottom: 10px;
+
+      p {
+        text-align: center;
+        width: 100%;
+        font-size: 20px;
+      }
+    }
+
+    &:first-of-type {
+        margin-top: 25px;
+    }
+  }
+
+  &FormContainer {
+    display: block;
+
+    &Title {
+        font-size: 25px;
+        line-height: 19px;
+        text-align: center;
+    }
+
+    &Form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            border: 1px solid #dcdcdc;
+            padding: 5px;
+            margin: 20px 0;
+
+            &:focus, &:focus-visible {
+                border: 2px solid #dcdcdc;
+                outline: #dcdcdc;
+            }
+        }
+
+        textarea {
+            border: 1px solid #dcdcdc;
+            padding: 10px;
+            margin: 20px 0;
+
+            &:focus, &:focus-visible {
+                border: 2px solid #dcdcdc;
+                outline: #dcdcdc;
+            }
+        }
+    }
+  }
+}
