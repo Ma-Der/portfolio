@@ -92,6 +92,10 @@
             "alt": "leaderna"
           },
           "description": ""
+        },
+        {
+          "title": "Binance Trading Bot",
+          "description": "I've created a trading bot based on binance SPOT API. I've used an AI to analize historical data from binance, my wallet and my previous transactions. Technology used: NodeJs with TypeScript, Redis for database. I've also integrated Discord, so when error happens I get noticed right away."
         }
       ]
     }
