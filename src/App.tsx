@@ -7,35 +7,42 @@ import { Header } from "./components/Header";
 import { Hobby } from "./components/Hobby";
 import { Footer } from "./components/Footer";
 import { Projects } from "./components/Projects";
-import { useFooterDimensions } from "./components/Footer/hooks";
 import { MobileHeader } from "./components/Header/Mobile";
-import data from './utils/static-content.json';
+import data from "./utils/static-content.json";
+import { Language } from "./contracts/components";
 
 function App() {
   const [activeLink, setActiveLink] = useState("Home");
+  const [language, setLanguage] = useState<Language>("eng");
   const ref = useRef<HTMLDivElement | null>(null);
-  const { height } = useFooterDimensions(ref);
+  const { eng, pol } = data;
+  const lang = language === "eng" ? eng : pol;
 
   return (
     <Fragment>
-      <Header activeLink={activeLink} setActiveLink={setActiveLink} />
-      <MobileHeader activeLink={activeLink} setActiveLink={setActiveLink} />
+      <Header
+        activeLink={activeLink}
+        navigation={lang.navigation}
+        setActiveLink={setActiveLink}
+        setLanguage={setLanguage}
+      />
+      <MobileHeader
+        activeLink={activeLink}
+        navigation={lang.navigation}
+        setActiveLink={setActiveLink}
+        setLanguage={setLanguage}
+      />
       <div className="wrapper">
         <Routes>
-          <Route path={"/"} element={<Homepage footerHeight={height} {...data.home} />} />
-          <Route
-            path={"/contact"}
-            element={<Contact footerHeight={height} {...data.contact} />}
-          />
-          <Route path={"/hobby"} element={<Hobby footerHeight={height} {...data.hobby} />} />
-          <Route
-            path={"/projects"}
-            element={<Projects footerHeight={height} {...data.projects} />}
-          />
+          <Route path={"/"} element={<Homepage {...lang.home} />} />
+          <Route path={"/contact"} element={<Contact {...lang.contact} />} />
+          <Route path={"/hobby"} element={<Hobby {...lang.hobby} />} />
+          <Route path={"/projects"} element={<Projects {...lang.projects} />} />
         </Routes>
       </div>
       <Footer
         activeLink={activeLink}
+        navigation={lang.navigation}
         setActiveLink={setActiveLink}
         footerRef={ref}
       />

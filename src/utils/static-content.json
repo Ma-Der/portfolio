@@ -1,114 +1,233 @@
 {
-  "navigation": [
-    {
-      "link": "/",
-      "name": "Home"
+  "eng": {
+    "navigation": [
+      {
+        "link": "/",
+        "name": "Home"
+      },
+      {
+        "link": "/projects",
+        "name": "Projects"
+      },
+      {
+        "link": "/hobby",
+        "name": "Hobby"
+      },
+      {
+        "link": "/contact",
+        "name": "Contact"
+      }
+    ],
+    "home": {
+      "title": "Let me introduce myself ...",
+      "description": ""
     },
-    {
-      "link": "/projects",
-      "name": "Projects"
-    },
-    {
-      "link": "/hobby",
-      "name": "Hobby"
-    },
-    {
-      "link": "/contact",
-      "name": "Contact"
-    }
-  ],
-  "home": {
-    "title": "Let me introduce myself ...",
-    "description": ""
-  },
-  "projects": {
-    "title": "Projects",
-    "frontend": {
-      "title": "Frontend",
-      "projects": [
-        {
-          "title": "Blendjet",
-          "description": "",
-          "link": "https://www.blendjet.com",
-          "image": {
-            "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699892323/portfolio/blendjet_uu2jql_jifrqj.png",
-            "alt": "blendjet"
-          }
-        },
-        {
-          "title": "RBX Active",
-          "description": "",
-          "link": "https://www.rbxactive.com",
-          "image": {
-            "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699892027/portfolio/rbx_owvsmj_imthav.png",
-            "alt": "rbx-active"
-          }
-        },
-        {
-          "title": "Muslin Comfort",
-          "description": "",
-          "link": "https://www.muslincomfort.com",
-          "image": {
-            "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699892189/portfolio/muslin_m6xccj_meq6w7.png",
-            "alt": "muslin-comfort"
-          }
-        },
-        {
-          "title": "Alex And Ani",
-          "description": "",
-          "link": "https://www.alexandani.com",
-          "image": {
-            "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699892100/portfolio/ti7bwxpflwwroknqeb06_uzknnc.png",
-            "alt": "alexandani"
-          }
-        },
-        {
-          "title": "Three Bird Nest",
-          "description": "",
-          "link": "https://www.alexandani.com",
-          "image": {
-            "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699437986/3bn_awyptw_gdicwn.png",
-            "alt": "threebirdnest"
-          }
-        }
-      ]
-    },
-    "backend": {
-      "title": "Backend",
-      "projects": [
-        {
-          "title": "Language school automatization",
-          "description": ""
-        },
-        {
-          "title": "Erli Google Ads API",
-          "description": "I was creating an api of google ads and google merchant center for Erli, so they could internaly provide google ads for their clients. Technologies used: NodeJS"
-        },
-        {
-          "title": "Leaderna Platform",
-          "link": "https://www.leadernaplatform.com/",
-          "image": {
-            "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699891925/leaderna_hv2i2q_rnlkb1.png",
-            "alt": "leaderna"
+    "projects": {
+      "title": "My work so far",
+      "frontend": {
+        "title": "Frontend",
+        "description": "All of these frontend projects where based on Shopify. Technologies used: Preact, Typescript",
+        "projects": [
+          {
+            "title": "Blendjet",
+            "description": "",
+            "link": "https://www.blendjet.com",
+            "image": {
+              "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699892323/portfolio/blendjet_uu2jql_jifrqj.png",
+              "alt": "blendjet"
+            }
           },
-          "description": ""
-        },
-        {
-          "title": "Binance Trading Bot",
-          "description": "I've created a trading bot based on binance SPOT API. I've used an AI to analize historical data from binance, my wallet and my previous transactions. Technology used: NodeJs with TypeScript, Redis for database. I've also integrated Discord, so when error happens I get noticed right away."
-        }
-      ]
+          {
+            "title": "RBX Active",
+            "description": "",
+            "link": "https://www.rbxactive.com",
+            "image": {
+              "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699892027/portfolio/rbx_owvsmj_imthav.png",
+              "alt": "rbx-active"
+            }
+          },
+          {
+            "title": "Muslin Comfort",
+            "description": "",
+            "link": "https://www.muslincomfort.com",
+            "image": {
+              "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699892189/portfolio/muslin_m6xccj_meq6w7.png",
+              "alt": "muslin-comfort"
+            }
+          },
+          {
+            "title": "Alex And Ani",
+            "description": "",
+            "link": "https://www.alexandani.com",
+            "image": {
+              "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699892100/portfolio/ti7bwxpflwwroknqeb06_uzknnc.png",
+              "alt": "alexandani"
+            }
+          },
+          {
+            "title": "Three Bird Nest",
+            "description": "",
+            "link": "https://www.threebirdnest.com",
+            "image": {
+              "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699437986/3bn_awyptw_gdicwn.png",
+              "alt": "threebirdnest"
+            }
+          }
+        ]
+      },
+      "backend": {
+        "title": "Backend",
+        "projects": [
+          {
+            "title": "Language school automatization",
+            "description": ""
+          },
+          {
+            "title": "Erli Google Ads API",
+            "description": "I was creating an api of google ads and google merchant center for Erli, so they could internaly provide google ads for their clients. Technologies used: NodeJS"
+          },
+          {
+            "title": "Leaderna Platform",
+            "link": "https://www.leadernaplatform.com/",
+            "image": {
+              "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699891925/leaderna_hv2i2q_rnlkb1.png",
+              "alt": "leaderna"
+            },
+            "description": ""
+          },
+          {
+            "title": "Binance Trading Bot",
+            "description": "I've created a trading bot based on binance SPOT API. I've used an AI to analize historical data from binance, my wallet and my previous transactions. Technology used: NodeJs with TypeScript, Redis for database. I've also integrated Discord, so when error happens I get noticed right away."
+          }
+        ]
+      }
+    },
+    "hobby": {
+      "title": "Hobby",
+      "description": "Beside writing code and being a dev ... For most of my life I've enjoyed music, as a listener, as a musician, so this is my other passion/hobby - playing instruments and performing music live."
+    },
+    "contact": {
+      "title": "You can catch me here ...",
+      "github": "https://www.github.com/Ma-Der",
+      "linkedin": "https://www.linkedin.com/in/ma-der/",
+      "phone": "512187396",
+      "email": "mactgder@gmail.com"
+    }  
+  },
+  "pol": {
+    "navigation": [
+      {
+        "link": "/",
+        "name": "Home"
+      },
+      {
+        "link": "/projects",
+        "name": "Projects"
+      },
+      {
+        "link": "/hobby",
+        "name": "Hobby"
+      },
+      {
+        "link": "/contact",
+        "name": "Contact"
+      }
+    ],
+    "home": {
+      "title": "Let me introduce myself ...",
+      "description": ""
+    },
+    "projects": {
+      "title": "My work so far",
+      "frontend": {
+        "title": "Frontend",
+        "description": "All of these frontend projects where based on Shopify. Technologies used: Preact, Typescript",
+        "projects": [
+          {
+            "title": "Blendjet",
+            "description": "",
+            "link": "https://www.blendjet.com",
+            "image": {
+              "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699892323/portfolio/blendjet_uu2jql_jifrqj.png",
+              "alt": "blendjet"
+            }
+          },
+          {
+            "title": "RBX Active",
+            "description": "",
+            "link": "https://www.rbxactive.com",
+            "image": {
+              "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699892027/portfolio/rbx_owvsmj_imthav.png",
+              "alt": "rbx-active"
+            }
+          },
+          {
+            "title": "Muslin Comfort",
+            "description": "",
+            "link": "https://www.muslincomfort.com",
+            "image": {
+              "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699892189/portfolio/muslin_m6xccj_meq6w7.png",
+              "alt": "muslin-comfort"
+            }
+          },
+          {
+            "title": "Alex And Ani",
+            "description": "",
+            "link": "https://www.alexandani.com",
+            "image": {
+              "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699892100/portfolio/ti7bwxpflwwroknqeb06_uzknnc.png",
+              "alt": "alexandani"
+            }
+          },
+          {
+            "title": "Three Bird Nest",
+            "description": "",
+            "link": "https://www.threebirdnest.com",
+            "image": {
+              "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699437986/3bn_awyptw_gdicwn.png",
+              "alt": "threebirdnest"
+            }
+          }
+        ]
+      },
+      "backend": {
+        "title": "Backend",
+        "projects": [
+          {
+            "title": "Language school automatization",
+            "description": ""
+          },
+          {
+            "title": "Erli Google Ads API",
+            "description": "I was creating an api of google ads and google merchant center for Erli, so they could internaly provide google ads for their clients. Technologies used: NodeJS"
+          },
+          {
+            "title": "Leaderna Platform",
+            "link": "https://www.leadernaplatform.com/",
+            "image": {
+              "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699891925/leaderna_hv2i2q_rnlkb1.png",
+              "alt": "leaderna"
+            },
+            "description": ""
+          },
+          {
+            "title": "Binance Trading Bot",
+            "description": "I've created a trading bot based on binance SPOT API. I've used an AI to analize historical data from binance, my wallet and my previous transactions. Technology used: NodeJs with TypeScript, Redis for database. I've also integrated Discord, so when error happens I get noticed right away."
+          }
+        ]
+      }
+    },
+    "hobby": {
+      "title": "Hobby",
+      "description": "Beside writing code and being a dev ... For most of my life I've enjoyed music, as a listener, as a musician, so this is my other passion/hobby - playing instruments and performing music live."
+    },
+    "contact": {
+      "title": "You can catch me here ...",
+      "github": "https://www.github.com/Ma-Der",
+      "linkedin": "https://www.linkedin.com/in/ma-der/",
+      "phone": "512187396",
+      "email": "mactgder@gmail.com"
     }
-  },
-  "hobby": {
-    "title": "Hobby",
-    "description": ""
-  },
-  "contact": {
-    "title": "You can catch me here ...",
-    "github": "https://www.github.com/Ma-Der",
-    "linkedin": "https://www.linkedin.com/in/ma-der/",
-    "phone": "512187396",
-    "email": "mactgder@gmail.com"
+  
   }
-}
+  }

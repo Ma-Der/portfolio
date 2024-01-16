@@ -6,7 +6,12 @@ import { HeaderProps } from "../../contracts/components/Header";
 
 const { wrapper, wrapperContainer, wrapperIcon } = styles;
 
-export const Header = ({ activeLink, setActiveLink }: HeaderProps) => {
+export const Header = ({
+  activeLink,
+  navigation,
+  setLanguage,
+  setActiveLink,
+}: HeaderProps) => {
   return (
     <div className={wrapper}>
       <div className={wrapperContainer}>
@@ -15,8 +20,12 @@ export const Header = ({ activeLink, setActiveLink }: HeaderProps) => {
             Maciej Derewianski
           </Link>
         </div>
-        <Navigation activeLink={activeLink} setActiveLink={setActiveLink} />
-        <Languages />
+        <Navigation
+          activeLink={activeLink}
+          navigation={navigation}
+          setActiveLink={setActiveLink}
+        />
+        <Languages setLanguage={setLanguage} />
       </div>
     </div>
   );

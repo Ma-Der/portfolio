@@ -4,12 +4,13 @@ import styles from "./rwd.module.scss";
 
 const { wrapper, wrapperIcon } = styles;
 
-export const Languages = ({ setOpenMenu }: LanguagesProps) => {
+export const Languages = ({ setOpenMenu, setLanguage }: LanguagesProps) => {
   return (
     <div className={wrapper}>
       <span
         className={wrapperIcon}
         onClick={() => {
+          setLanguage("pol");
           setOpenMenu && setOpenMenu(false);
         }}
       >
@@ -18,6 +19,7 @@ export const Languages = ({ setOpenMenu }: LanguagesProps) => {
       <span
         className={wrapperIcon}
         onClick={() => {
+          setLanguage("eng");
           setOpenMenu && setOpenMenu(false);
         }}
       >

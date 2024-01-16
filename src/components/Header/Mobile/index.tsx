@@ -17,7 +17,12 @@ const {
   moveLeft,
 } = styles;
 
-export const MobileHeader = ({ activeLink, setActiveLink }: HeaderProps) => {
+export const MobileHeader = ({
+  activeLink,
+  navigation,
+  setLanguage,
+  setActiveLink,
+}: HeaderProps) => {
   const [openMenu, setOpenMenu] = useState(false);
   useLockBodyScroll(openMenu);
 
@@ -38,15 +43,23 @@ export const MobileHeader = ({ activeLink, setActiveLink }: HeaderProps) => {
             <span></span>
           </div>
           <div className={wrapperIcon}>
-            <Languages setOpenMenu={setOpenMenu} />
-            <Link to="/" onClick={() => {
-              setActiveLink("Home");
-              setOpenMenu && setOpenMenu(false);
-            }}>
+            <Languages setOpenMenu={setOpenMenu} setLanguage={setLanguage} />
+            <Link
+              to="/"
+              onClick={() => {
+                setActiveLink("Home");
+                setOpenMenu && setOpenMenu(false);
+              }}
+            >
               Maciej Derewianski
             </Link>
           </div>
-          <Navigation activeLink={activeLink} setActiveLink={setActiveLink} setOpenMenu={setOpenMenu} />
+          <Navigation
+            activeLink={activeLink}
+            navigation={navigation}
+            setActiveLink={setActiveLink}
+            setOpenMenu={setOpenMenu}
+          />
         </div>
       </div>
     </Fragment>

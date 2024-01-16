@@ -1,11 +1,8 @@
 import { GithubSVG, LinkedinSVG } from "../shared/Icons";
-import staticData from "../../utils/static-content.json";
 import styles from "./rwd.module.scss";
 import { Link } from "react-router-dom";
 import { FooterProps } from "../../contracts/components/Footer";
 import { cx } from "../../utils/cx";
-
-const { navigation } = staticData;
 
 const {
   wrapper,
@@ -25,6 +22,7 @@ const {
 
 export const Footer = ({
   activeLink,
+  navigation,
   setActiveLink,
   footerRef,
 }: FooterProps) => {

@@ -6,10 +6,9 @@ const { wrapper } = styles;
 export const Homepage = ({
   title,
   description,
-  footerHeight,
 }: HomepageProps) => {
   return (
-    <div className={wrapper} style={{ marginBottom: footerHeight + 30 }}>
+    <div className={wrapper}>
       <h3>{title}</h3>
       <div>{description}</div>
     </div>

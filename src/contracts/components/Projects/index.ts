@@ -2,9 +2,9 @@ import { ProjectProps } from "./utilityTypes";
 
 export type ProjectsProps = {
   title: string;
-  footerHeight: number;
   frontend: {
     title: string;
+    description: string;
     projects: ProjectProps[];
   };
   backend: {

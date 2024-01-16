@@ -10,18 +10,14 @@ const {
   wrapperContainerProjectTitle,
 } = styles;
 
-export const Projects = ({
-  footerHeight,
-  frontend,
-  backend,
-  title,
-}: ProjectsProps) => {
+export const Projects = ({ frontend, backend, title }: ProjectsProps) => {
   return (
-    <div className={wrapper} style={{ marginBottom: footerHeight + 200 }}>
+    <div className={wrapper}>
       <h2 className={wrapperTitle}>{title}</h2>
       <div className={wrapperContainer}>
         <div className={wrapperContainerProject}>
           <h3 className={wrapperContainerProjectTitle}>{frontend.title}</h3>
+          <p>{frontend.description}</p>
           {frontend.projects.map((project, i) => (
             <Project key={`${project.title}${i}`} {...project} />
           ))}

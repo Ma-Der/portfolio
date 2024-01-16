@@ -13,7 +13,6 @@ const {
 } = styles;
 
 export const Contact = ({
-  footerHeight,
   github,
   linkedin,
   phone,
@@ -28,7 +27,7 @@ export const Contact = ({
   };
 
   return (
-    <div className={wrapper} style={{ marginBottom: footerHeight + 30 }}>
+    <div className={wrapper}>
       <h2 className={wrapperTitle}>{title}</h2>
       <div className={wrapperIcon}>
         <a href={github} target="_blank" rel="noreferrer">

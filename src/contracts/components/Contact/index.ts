@@ -4,5 +4,4 @@ export type ContactProps = {
   linkedin: string;
   phone: string;
   email: string;
-  footerHeight: number;
 };

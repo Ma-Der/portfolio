@@ -1,7 +1,15 @@
 import { Dispatch, SetStateAction } from "react";
+import { Language } from "..";
 
 export type HeaderProps = {
-    activeLink: string;
-    setActiveLink: Dispatch<SetStateAction<string>>;
-    setOpenMenu?: Dispatch<SetStateAction<boolean>>;
-}
+  navigation: NavigationProps[];
+  activeLink: string;
+  setActiveLink: Dispatch<SetStateAction<string>>;
+  setLanguage: Dispatch<SetStateAction<Language>>;
+  setOpenMenu?: Dispatch<SetStateAction<boolean>>;
+};
+
+export type NavigationProps = {
+  name: string;
+  link: string;
+};

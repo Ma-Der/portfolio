@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
-import staticData from "../../utils/static-content.json";
-
 import styles from "./rwd.module.scss";
 import { HeaderProps } from "../../contracts/components/Header";
 import { cx } from "../../utils/cx";
 
-const { navigation } = staticData;
-
 const { wrapper, wrapperLink, active } = styles;
 
-export const Navigation = ({ activeLink, setActiveLink, setOpenMenu }: HeaderProps) => {
+export const Navigation = ({
+  activeLink,
+  navigation,
+  setActiveLink,
+  setOpenMenu,
+}: Omit<HeaderProps, "setLanguage">) => {
   return (
     <div className={wrapper}>
       {navigation.map((item) => {
