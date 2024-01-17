@@ -110,7 +110,11 @@
       "github": "https://www.github.com/Ma-Der",
       "linkedin": "https://www.linkedin.com/in/ma-der/",
       "phone": "512187396",
-      "email": "mactgder@gmail.com"
+      "email": "mactgder@gmail.com",
+      "popup": {
+        "positive": "Message sent, thank you :)",
+        "negative": "Something went wrong with sending message, :( Sorry."
+      }
     }  
   },
   "pol": {
@@ -225,7 +229,11 @@
       "github": "https://www.github.com/Ma-Der",
       "linkedin": "https://www.linkedin.com/in/ma-der/",
       "phone": "512187396",
-      "email": "mactgder@gmail.com"
+      "email": "mactgder@gmail.com",
+      "popup": {
+        "positive": "Message sent, thank you :)",
+        "negative": "Something went wrong with sending message, :( Sorry."
+      }
     }
   
   }

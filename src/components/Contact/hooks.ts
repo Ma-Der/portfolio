@@ -11,9 +11,15 @@ export const sendMail = async (formData: RefObject<HTMLFormElement>) => {
       process.env.REACT_APP_MAIL_API_KEY
     );
     if (response.status === 200) {
-      console.log("email sent - SUCCESS");
+      return {
+        status: 200,
+        message: 'sent',
+      }
     }
   } catch (err) {
-    console.error("Error occured during sending email.");
+    return {
+      status: 400,
+      message: err,
+    }
   }
 };
