@@ -1,4 +1,4 @@
-import React, { Fragment, useRef, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
 import { Contact } from "./components/Contact";
@@ -10,13 +10,24 @@ import { Projects } from "./components/Projects";
 import { MobileHeader } from "./components/Header/Mobile";
 import data from "./utils/static-content.json";
 import { Language } from "./contracts/components";
+import { getActiveLinkFromUrl } from "./utils/getActiveLinkFromUrl";
 
 function App() {
-  const [activeLink, setActiveLink] = useState("Home");
+  const [activeLink, setActiveLink] = useState("home");
   const [language, setLanguage] = useState<Language>("eng");
   const ref = useRef<HTMLDivElement | null>(null);
   const { eng, pol } = data;
   const lang = language === "eng" ? eng : pol;
+
+  useEffect(() => {
+    const link = getActiveLinkFromUrl();
+
+    if (link === "") {
+      setActiveLink("home");
+    } else {
+      setActiveLink(link);
+    }
+  }, [activeLink]);
 
   return (
     <Fragment>

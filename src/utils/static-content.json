@@ -3,19 +3,19 @@
     "navigation": [
       {
         "link": "/",
-        "name": "Home"
+        "name": "home"
       },
       {
         "link": "/projects",
-        "name": "Projects"
+        "name": "projects"
       },
       {
         "link": "/hobby",
-        "name": "Hobby"
+        "name": "hobby"
       },
       {
         "link": "/contact",
-        "name": "Contact"
+        "name": "contact"
       }
     ],
     "home": {
@@ -117,19 +117,19 @@
     "navigation": [
       {
         "link": "/",
-        "name": "Home"
+        "name": "home"
       },
       {
         "link": "/projects",
-        "name": "Projects"
+        "name": "projects"
       },
       {
         "link": "/hobby",
-        "name": "Hobby"
+        "name": "hobby"
       },
       {
         "link": "/contact",
-        "name": "Contact"
+        "name": "contact"
       }
     ],
     "home": {
