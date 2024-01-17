@@ -1,11 +1,45 @@
 .wrapper {
   text-decoration: none;
   color: #000;
-  
-  border-bottom: 1px solid #dcdcdc;
 
-  &:last-of-type {
-    border-bottom: none;
+  border-bottom: 1px solid #dcdcdc;
+  text-align: center;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  background-image: linear-gradient(131.83deg, #fffafa 0%, #fff7f7 99.21%);
+  border-radius: 16px;
+  position: relative;
+
+  padding: 16px;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background-image: linear-gradient(
+      312.25deg,
+      #ffc4bc 0%,
+      rgba(255, 255, 255, 0) 66.19%
+    );
+    z-index: -1;
+    border-radius: 18px;
+  }
+
+  &Inner {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 40px 80px #fbe4e0;
+    border-radius: 14px;
+    padding: 14px;
   }
 
   &Title {
@@ -19,10 +53,10 @@
     max-height: 100px;
     padding-bottom: 1rem;
     width: 100%;
-    //height: 100%;
   }
 
   &Description {
     padding-bottom: 1rem;
+    margin: auto 0;
   }
 }

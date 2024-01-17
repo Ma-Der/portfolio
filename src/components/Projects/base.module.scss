@@ -1,33 +1,27 @@
 .wrapper {
   padding: 25px;
-  font-family: 'Lato';
-
-  &Title {
-    font-size: 32px;
-    line-height: 26px;
-    text-align: center;
-    width: 100%;
-  }
+  font-family: "Lato";
 
   &Container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-    
     &Project {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
       max-width: 1440px;
       width: 100%;
       margin: 0 auto;
       padding: 10px;
-  
+
+      &Description {
+        text-align: center;
+      }
+
       &Title {
-          text-transform: uppercase;
-          font-size: 25px;
-          color: #899EA9;
-          text-align: center;
+        text-transform: uppercase;
+        font-size: 25px;
+        color: #899ea9;
+        text-align: center;
       }
     }
   }
-
-  
 }

@@ -23,7 +23,6 @@
       "description": ""
     },
     "projects": {
-      "title": "My work so far",
       "frontend": {
         "title": "Frontend",
         "description": "All of these frontend projects where based on Shopify. Technologies used: Preact, Typescript",
@@ -80,7 +79,7 @@
         "projects": [
           {
             "title": "Language school automatization",
-            "description": ""
+            "description": "The problem to solve was to eliminate any human work during creating first and next invoices and send them to the client. It has been solved using a no-code tool - Make. There I connected Google Form for getting all the data that was needed to create invoice in accounting system and then it was send with Gmail to the desired client."
           },
           {
             "title": "Erli Google Ads API",
@@ -93,7 +92,7 @@
               "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699891925/leaderna_hv2i2q_rnlkb1.png",
               "alt": "leaderna"
             },
-            "description": ""
+            "description": "This project actually is both done on frontend and backend. As it goes for backend, I've made CRUD apis with GraphQL. As it goes for frontend, I've made the landing page. Click on the image. "
           },
           {
             "title": "Binance Trading Bot",
@@ -195,7 +194,7 @@
         "projects": [
           {
             "title": "Language school automatization",
-            "description": ""
+            "description": "The problem to solve was to eliminate any human work during creating first and next invoices and send them to the client. It has been solved using a no-code tool - Make. There I connected Google Form for getting all the data that was needed to create invoice in accounting system and then it was send with Gmail to the desired client."
           },
           {
             "title": "Erli Google Ads API",

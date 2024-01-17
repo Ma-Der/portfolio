@@ -4,26 +4,25 @@ import styles from "./rwd.module.scss";
 
 const {
   wrapper,
-  wrapperTitle,
   wrapperContainer,
   wrapperContainerProject,
   wrapperContainerProjectTitle,
+  wrapperContainerProjectDescription,
 } = styles;
 
-export const Projects = ({ frontend, backend, title }: ProjectsProps) => {
+export const Projects = ({ frontend, backend }: ProjectsProps) => {
   return (
     <div className={wrapper}>
-      <h2 className={wrapperTitle}>{title}</h2>
       <div className={wrapperContainer}>
+        <h3 className={wrapperContainerProjectTitle}>{frontend.title}</h3>
+        <p className={wrapperContainerProjectDescription}>{frontend.description}</p>
         <div className={wrapperContainerProject}>
-          <h3 className={wrapperContainerProjectTitle}>{frontend.title}</h3>
-          <p>{frontend.description}</p>
           {frontend.projects.map((project, i) => (
             <Project key={`${project.title}${i}`} {...project} />
           ))}
         </div>
+        <h3 className={wrapperContainerProjectTitle}>{backend.title}</h3>
         <div className={wrapperContainerProject}>
-          <h3 className={wrapperContainerProjectTitle}>{backend.title}</h3>
           {backend.projects.map((project, i) => (
             <Project key={`${project.title}${i}`} {...project} />
           ))}
