@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ContactProps } from "../../contracts/components/Contact";
 import styles from "./rwd.module.scss";
 import { sendMail } from "./hooks";
@@ -22,9 +22,9 @@ export const Contact = ({
   popup,
 }: ContactProps) => {
   const formRef = useRef<HTMLFormElement>(null);
-  const [name, setName] = useState('');
-  const [formEmail, setFormEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [formEmail, setFormEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [activatePopup, setActivatePopup] = useState(false);
   const [messageSent, setMessageSent] = useState(false);
 
@@ -32,26 +32,42 @@ export const Contact = ({
     e.preventDefault();
     if (!formRef.current) return;
     sendMail(formRef)
-    .then(response => {
-      if(response?.status === 200) {
-        setActivatePopup(true);
-        setMessageSent(true);
+      .then((response) => {
+        if (response?.status === 200) {
+          setActivatePopup(true);
+          setMessageSent(true);
 
-        setName('');
-        setFormEmail('');
-        setMessage('');
-      }
-    })
-    .catch(error => {
-      setActivatePopup(true);
-      setMessageSent(false);
-    });
-    
+          setName("");
+          setFormEmail("");
+          setMessage("");
+        }
+      })
+      .catch((error) => {
+        setActivatePopup(true);
+        setMessageSent(false);
+      });
   };
+
+  useEffect(() => {
+    if (activatePopup) {
+      const timeout = setTimeout(() => {
+        setActivatePopup(false);
+      }, 2000);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [activatePopup]);
 
   return (
     <div className={wrapper}>
-      {true && <PopUp confirmation={messageSent} popup={popup}/>}
+      {activatePopup && (
+        <PopUp
+          confirmation={messageSent}
+          activatePopup={activatePopup}
+          popup={popup}
+          setActivatePopup={setActivatePopup}
+        />
+      )}
       <h2 className={wrapperTitle}>{title}</h2>
       <div className={wrapperIcon}>
         <a href={github} target="_blank" rel="noreferrer">
@@ -110,9 +126,22 @@ export const Contact = ({
           <input type="text" hidden value="Maciek" name="to_name" readOnly />
 
           <label htmlFor="from_name">Name: </label>
-          <input name="from_name" id="from_name" value={name} onChange={(e) => setName(e.target.value)} required />
+          <input
+            name="from_name"
+            id="from_name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
           <label htmlFor="reply_to">Your Email: </label>
-          <input type="email" name="reply_to" id="reply_to" value={formEmail} onChange={(e) => setFormEmail(e.target.value)} required />
+          <input
+            type="email"
+            name="reply_to"
+            id="reply_to"
+            value={formEmail}
+            onChange={(e) => setFormEmail(e.target.value)}
+            required
+          />
           <label htmlFor="message">Message: </label>
           <textarea
             name="message"
