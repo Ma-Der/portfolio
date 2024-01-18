@@ -3,6 +3,7 @@ import styles from "./rwd.module.scss";
 import { Link } from "react-router-dom";
 import { FooterProps } from "../../contracts/components/Footer";
 import { cx } from "../../utils/cx";
+import { useState } from "react";
 
 const {
   wrapper,
@@ -26,6 +27,7 @@ export const Footer = ({
   setActiveLink,
   footerRef,
 }: FooterProps) => {
+  const [year] = useState(new Date().getFullYear());
   return (
     <div ref={footerRef} className={wrapper}>
       <div className={wrapperContainer}>
@@ -81,7 +83,7 @@ export const Footer = ({
       </div>
 
       <p className={wrapperCopyright}>
-        &#169; 2023 Maciej Derewiański. All rights reserved.
+        &#169; {year} Maciej Derewiański. All rights reserved.
       </p>
     </div>
   );
