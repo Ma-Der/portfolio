@@ -102,8 +102,9 @@
       }
     },
     "hobby": {
-      "title": "Hobby",
-      "description": "Beside writing code and being a dev ... For most of my life I've enjoyed music, as a listener, as a musician, so this is my other passion/hobby - playing instruments and performing music live."
+      "title": "Relax",
+      "description": "Beside writing code and being a dev ... For most of my life I've enjoyed music, as a listener, as a musician, so this is my other passion/hobby - playing instruments and performing music live.",
+      "images": ["https://res.cloudinary.com/dng7fejfe/image/upload/v1705583352/FXT22730psb_hvvfrw.jpg", "https://res.cloudinary.com/dng7fejfe/image/upload/v1705583910/4d2722c7-4a7c-4873-8336-c8aa21019ad4_r16uol.jpg"]
     },
     "contact": {
       "title": "You can catch me here ...",
@@ -221,8 +222,9 @@
       }
     },
     "hobby": {
-      "title": "Hobby",
-      "description": "Beside writing code and being a dev ... For most of my life I've enjoyed music, as a listener, as a musician, so this is my other passion/hobby - playing instruments and performing music live."
+      "title": "Relax",
+      "description": "Beside writing code nd being a dev ... For most of my life I've enjoyed music, as a listener, as a musician, so this is my other passion/hobby - playing instruments and performing music live.",
+      "images": ["https://res.cloudinary.com/dng7fejfe/image/upload/v1705583352/FXT22730psb_hvvfrw.jpg", "https://res.cloudinary.com/dng7fejfe/image/upload/v1705583910/4d2722c7-4a7c-4873-8336-c8aa21019ad4_r16uol.jpg"]
     },
     "contact": {
       "title": "You can catch me here ...",
