@@ -12,6 +12,10 @@ body {
   color: #fff;
   font-size: 20px;
   text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn:hover {

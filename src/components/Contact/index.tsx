@@ -3,6 +3,7 @@ import { ContactProps } from "../../contracts/components/Contact";
 import styles from "./rwd.module.scss";
 import { sendMail } from "./hooks";
 import { PopUp } from "./PopUp";
+import { Loader } from "../shared/Loader";
 
 const {
   wrapper,
@@ -27,16 +28,18 @@ export const Contact = ({
   const [message, setMessage] = useState("");
   const [activatePopup, setActivatePopup] = useState(false);
   const [messageSent, setMessageSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSendMail = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formRef.current) return;
+    setLoading(true);
     sendMail(formRef)
       .then((response) => {
         if (response?.status === 200) {
           setActivatePopup(true);
           setMessageSent(true);
-
+          setLoading(false);
           setName("");
           setFormEmail("");
           setMessage("");
@@ -45,6 +48,7 @@ export const Contact = ({
       .catch((error) => {
         setActivatePopup(true);
         setMessageSent(false);
+        setLoading(false);
       });
   };
 
@@ -132,6 +136,7 @@ export const Contact = ({
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
+            disabled={loading}
           />
           <label htmlFor="reply_to">Your Email: </label>
           <input
@@ -141,6 +146,7 @@ export const Contact = ({
             value={formEmail}
             onChange={(e) => setFormEmail(e.target.value)}
             required
+            disabled={loading}
           />
           <label htmlFor="message">Message: </label>
           <textarea
@@ -152,9 +158,10 @@ export const Contact = ({
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
+            disabled={loading}
           ></textarea>
-          <button className={"btn"} type="submit">
-            Send
+          <button className={"btn"} type="submit" disabled={loading}>
+            {loading ? <Loader /> : <span>{'Send'}</span>}
           </button>
         </form>
       </div>
