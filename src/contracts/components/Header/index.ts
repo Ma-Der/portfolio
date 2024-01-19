@@ -12,4 +12,5 @@ export type HeaderProps = {
 export type NavigationProps = {
   name: string;
   link: string;
+  displayName: string;
 };

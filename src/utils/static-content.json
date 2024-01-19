@@ -3,24 +3,29 @@
     "navigation": [
       {
         "link": "/",
-        "name": "home"
+        "name": "home",
+        "displayName": "home"
       },
       {
         "link": "/projects",
-        "name": "projects"
+        "name": "projects",
+        "displayName": "projects"
       },
       {
         "link": "/hobby",
-        "name": "hobby"
+        "name": "hobby",
+        "displayName": "hobby"
       },
       {
         "link": "/contact",
-        "name": "contact"
+        "name": "contact",
+        "displayName": "contact"
       }
     ],
     "home": {
       "title": "Let me introduce myself ...",
-      "description": ""
+      "description": "",
+      "frontImage": "https://res.cloudinary.com/dng7fejfe/image/upload/v1705651677/front_entmhm.jpg"
     },
     "projects": {
       "frontend": {
@@ -115,6 +120,14 @@
       "popup": {
         "positive": "Message sent, thank you :)",
         "negative": "Something went wrong with sending message, :( Sorry."
+      },
+      "form": {
+        "title": "Or just send me a message here:",
+        "nameLabel": "Name",
+        "emailLabel": "Email",
+        "messageLabel": "Message",
+        "messagePlaceholder": "Place you message ...",
+        "buttonText": "Send"
       }
     }  
   },
@@ -122,30 +135,35 @@
     "navigation": [
       {
         "link": "/",
-        "name": "home"
+        "name": "home",
+        "displayName": "strona glowna"
       },
       {
         "link": "/projects",
-        "name": "projects"
+        "name": "projects",
+        "displayName": "projekty"
       },
       {
         "link": "/hobby",
-        "name": "hobby"
+        "name": "hobby",
+        "displayName": "hobby"
       },
       {
         "link": "/contact",
-        "name": "contact"
+        "name": "contact",
+        "displayName": "kontakt"
       }
     ],
     "home": {
-      "title": "Let me introduce myself ...",
-      "description": ""
+      "title": "Wypada się przedstawić ...",
+      "description": "",
+      "frontImage": "https://res.cloudinary.com/dng7fejfe/image/upload/v1705651677/front_entmhm.jpg"
     },
     "projects": {
-      "title": "My work so far",
+      "title": "Moja dotychczasowa praca",
       "frontend": {
         "title": "Frontend",
-        "description": "All of these frontend projects where based on Shopify. Technologies used: Preact, Typescript",
+        "description": "Wszystkie projekty z kategorii frontend bazują na Shopify jako baza danych. Użyte technologie: Preact, Typescript",
         "projects": [
           {
             "title": "Blendjet",
@@ -198,12 +216,12 @@
         "title": "Backend",
         "projects": [
           {
-            "title": "Language school automatization",
-            "description": "The problem to solve was to eliminate any human work during creating first and next invoices and send them to the client. It has been solved using a no-code tool - Make. There I connected Google Form for getting all the data that was needed to create invoice in accounting system and then it was send with Gmail to the desired client."
+            "title": "Automatyzacja szkoły językowej",
+            "description": "Problemem do rozwiązania było wyeliminowanie jakiejkolwiek pracy człowieka przy tworzeniu pierwszej i następnych faktur oraz wysłanie ich do klienta. Rozwiązałem to przy pomocy narzędzia no-code - Make. Podłączyłem formularz Google, który był odpowiedzialnt za zebranie wszystkich informacji potrzebnych do stworzenia faktury w systemie księgowym i przesłanie jej przy pomocy Gmail'a do odpowiedniego klienta."
           },
           {
-            "title": "Erli Google Ads API",
-            "description": "I was creating an api of google ads and google merchant center for Erli, so they could internaly provide google ads for their clients. Technologies used: NodeJS"
+            "title": "API Google Ads dla Erli",
+            "description": "Stworzyłem Api Google Ads i Google Merchant dla Erli, tak aby mogli zintegrować Google Ads ze swoim systemem. Użyte technologie: NodeJS"
           },
           {
             "title": "Leaderna Platform",
@@ -212,29 +230,37 @@
               "src": "https://res.cloudinary.com/dng7fejfe/image/upload/v1699891925/leaderna_hv2i2q_rnlkb1.png",
               "alt": "leaderna"
             },
-            "description": ""
+            "description": "This project actually is both done on frontend and backend. As it goes for backend, I've made CRUD apis with GraphQL. As it goes for frontend, I've made the landing page. Click on the image. "
           },
           {
             "title": "Binance Trading Bot",
-            "description": "I've created a trading bot based on binance SPOT API. I've used an AI to analize historical data from binance, my wallet and my previous transactions. Technology used: NodeJs with TypeScript, Redis for database. I've also integrated Discord, so when error happens I get noticed right away."
+            "description": "Stworzyłem bot'a do tradingu na Binance Spot. Wykorzystałem sztuczną inteligencję do analizowania danych historycznych zaciąganych z API Binance, mojego portfela oraz poprzednich transakcji cache'owanych w bazie danych. Użyte technologie: NodeJs z TypeScript'em, Redis. Zintegrowałem również Discord'a, aby dostawać powiadomienia na wypadek wystąpienia błędów."
           }
         ]
       }
     },
     "hobby": {
-      "title": "Relax",
-      "description": "Beside writing code nd being a dev ... For most of my life I've enjoyed music, as a listener, as a musician, so this is my other passion/hobby - playing instruments and performing music live.",
+      "title": "W czasie wolnym ...",
+      "description": "Poza pisaniem kodu i bycie deweloperem ... Przez większość życia pasjonowałem się muzyką jako słuchacz oraz jako muzyk, także to jest moja druga pasja - gra na instrumentach i występy na żywo.",
       "images": ["https://res.cloudinary.com/dng7fejfe/image/upload/v1705583352/FXT22730psb_hvvfrw.jpg", "https://res.cloudinary.com/dng7fejfe/image/upload/v1705583910/4d2722c7-4a7c-4873-8336-c8aa21019ad4_r16uol.jpg"]
     },
     "contact": {
-      "title": "You can catch me here ...",
+      "title": "Możesz mnie złapać poniżej ...",
       "github": "https://www.github.com/Ma-Der",
       "linkedin": "https://www.linkedin.com/in/ma-der/",
       "phone": "512187396",
       "email": "mactgder@gmail.com",
       "popup": {
-        "positive": "Message sent, thank you :)",
-        "negative": "Something went wrong with sending message, :( Sorry."
+        "positive": "Wiadomość wysłana, dziękuję :)",
+        "negative": "Coś poszło nie tak przy wysyłaniu wiadomości :( Przepraszam. Spróbuj jeszcze raz plissss :)"
+      },
+      "form": {
+        "title": "Lub wyślij do mnie wiadomość tutaj:",
+        "nameLabel": "Imię",
+        "emailLabel": "Email",
+        "messageLabel": "Wiadomość",
+        "messagePlaceholder": "Tutaj napisz swoją wiadomość ...",
+        "buttonText": "Wyślij"
       }
     }
   

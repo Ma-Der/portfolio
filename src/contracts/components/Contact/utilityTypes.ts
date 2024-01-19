@@ -11,3 +11,9 @@ export type PopUpMessages = {
   positive: string;
   negative: string;
 };
+
+export type FormLabels = {
+  nameLabel: string;
+  emailLabel: string;
+  messageLabel: string;
+};

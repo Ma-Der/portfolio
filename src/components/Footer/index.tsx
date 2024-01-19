@@ -43,7 +43,7 @@ export const Footer = ({
                 to={item.link}
                 key={`${item.link}_${item.name}`}
               >
-                {item.name}
+                {item.displayName}
               </Link>
             );
           })}

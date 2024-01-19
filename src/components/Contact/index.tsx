@@ -21,6 +21,7 @@ export const Contact = ({
   email,
   title,
   popup,
+  form,
 }: ContactProps) => {
   const formRef = useRef<HTMLFormElement>(null);
   const [name, setName] = useState("");
@@ -119,9 +120,7 @@ export const Contact = ({
       </div>
 
       <div className={wrapperFormContainer}>
-        <h3 className={wrapperFormContainerTitle}>
-          Or just send me a message here:{" "}
-        </h3>
+        <h3 className={wrapperFormContainerTitle}>{form.title}</h3>
         <form
           ref={formRef}
           onSubmit={handleSendMail}
@@ -129,7 +128,7 @@ export const Contact = ({
         >
           <input type="text" hidden value="Maciek" name="to_name" readOnly />
 
-          <label htmlFor="from_name">Name: </label>
+          <label htmlFor="from_name">{form.nameLabel}: </label>
           <input
             name="from_name"
             id="from_name"
@@ -138,7 +137,7 @@ export const Contact = ({
             required
             disabled={loading}
           />
-          <label htmlFor="reply_to">Your Email: </label>
+          <label htmlFor="reply_to">{form.emailLabel}: </label>
           <input
             type="email"
             name="reply_to"
@@ -148,20 +147,20 @@ export const Contact = ({
             required
             disabled={loading}
           />
-          <label htmlFor="message">Message: </label>
+          <label htmlFor="message">{form.messageLabel}: </label>
           <textarea
             name="message"
             id="message"
             cols={30}
             rows={10}
-            placeholder="Place your message"
+            placeholder={form.messagePlaceholder}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
             disabled={loading}
           ></textarea>
           <button className={"btn"} type="submit" disabled={loading}>
-            {loading ? <Loader /> : <span>{'Send'}</span>}
+            {loading ? <Loader /> : <span>{form.buttonText}</span>}
           </button>
         </form>
       </div>

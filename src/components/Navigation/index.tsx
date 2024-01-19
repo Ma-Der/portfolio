@@ -24,7 +24,7 @@ export const Navigation = ({
             to={item.link}
             key={`${item.name}+${item.name}`}
           >
-            {item.name}
+            {item.displayName}
           </Link>
         );
       })}
